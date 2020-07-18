@@ -49,6 +49,33 @@ jobs:
       - store_artifacts:
           path: ./reports
 
+  get-secrets:
+    description: A parameterized job that gets env vars from AWS Secrets Manager
+    executor: aws-cli/default
+    parameters:
+      environment-name:
+        description: "Name of the environment that becomes part of the secret-id"
+        default: ""
+        type: string
+    resource_class: *resource_class
+    working_directory: *working_directory
+    steps:
+      - aws-cli/setup
+      - run:
+          name: Get secret value from AWS Secrets Manager
+          command: |
+            echo 'export SECRETS=$(aws secretsmanager get-secret-value \
+            --secret-id="arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:${AWS_ACCOUNT_ID}:secret:${CIRCLE_PROJECT_REPONAME}-env-vars-<< parameters.environment-name >>" \
+            --query="SecretString" \
+            --output="text")' >> $BASH_ENV
+      - run:
+          name: Build .env file from $SECRETS variable
+          command: echo "$SECRETS" | jq -r '. | to_entries | .[] | .key + "=\"" + .value + "\""' > .env
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - .env
+
   npm-run-build:
     docker:
       - image: *node_image
@@ -96,7 +123,7 @@ jobs:
           to: "s3://<< parameters.s3-bucket-name >>"
 
 workflows:
-  version: 2
+  version: 1
   main-workflow:
     jobs:
       - npm-ci:
@@ -114,11 +141,13 @@ workflows:
             - npm-ci
 
       - get-secrets:
+          context: "context-aws-311638723712"
           filters:
             branches:
               only:
                 - master
           name: GetSecrets
+          environment-name: "prod"
 
       - npm-run-build:
           filters:
@@ -131,7 +160,7 @@ workflows:
             - GetSecrets
 
       - sync-files-to-s3:
-          context: ""
+          context: "context-aws-311638723712"
           filters:
             branches:
               only:

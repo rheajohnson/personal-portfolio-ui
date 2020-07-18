@@ -71,7 +71,7 @@ export default React.memo(function About({ desired, active, direction }) {
   return (
     <div className={`content animated ${animation}`}>
       <div className="main-content">
-        <h2>About</h2>
+        <h2>About me</h2>
         <p>
           I’m a web developer based in Boise, Idaho. I have a passion for
           learning and building things. I started my journey in 2016 as a UX/UI
