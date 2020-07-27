@@ -23,7 +23,7 @@ const App = () => {
   const particleConfig = {
     particles: {
       number: {
-        value: 20,
+        value: 15,
         density: {
           enable: true,
           value_area: 800,
@@ -55,7 +55,7 @@ const App = () => {
         setScrollDirection("down");
       }
     };
-    window.addEventListener("wheel", debounce(handleScroll, 200), {
+    window.addEventListener("wheel", debounce(handleScroll, 50), {
       passive: false,
     });
     return () => window.removeEventListener("wheel", handleScroll);

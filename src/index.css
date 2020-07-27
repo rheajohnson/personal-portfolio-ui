@@ -6,7 +6,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  text-shadow: none;
 }
 
 body {
@@ -120,12 +119,41 @@ button {
   width: 140px;
   height: 38px;
   color: white;
-  background: none;
+  background: transparent;
   border: 1px solid white;
   letter-spacing: 0.05em;
+  font-weight: 500;
   font-size: 13px;
   text-transform: uppercase;
   outline: none;
+  position: relative;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  cursor: pointer;
+  border-color: transparent;
+}
+
+button::after,
+input[type="submit"]::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(45deg, #f55b65, #f78361);
+  transition: 0.2s;
+  opacity: 0;
+}
+
+button:hover::after,
+input[type="submit"]:hover::after {
+  opacity: 1;
 }
 
 h2 {
@@ -144,14 +172,6 @@ h2:after {
   position: absolute;
   top: 44px;
   left: 0;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  cursor: pointer;
-  background-image: linear-gradient(45deg, #f55b65, #f78361);
-  outline: none;
-  border: none;
 }
 
 button:active,
@@ -340,7 +360,7 @@ input[type="submit"]:active {
 .name,
 .email,
 .message {
-  background-color: #4e596fbb;
+  background-color: #3b5064;
   border: none;
   font-family: "Open Sans", sans-serif;
   color: white;
@@ -381,11 +401,18 @@ a {
 }
 
 .main-content a {
+  display: inline-block;
   text-decoration: none;
-  background: -webkit-linear-gradient(45deg, #f55b65, #f78361);
-  font-weight: 600;
+  background-color: #f78361;
+  font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  transition: 0.2s;
+}
+
+.main-content a:hover {
+  opacity: 0.7;
 }
 
 textarea:focus,
@@ -393,8 +420,8 @@ input:focus,
 input[type]:focus,
 .uneditable-input:focus {
   -webkit-appearance: none;
-  box-shadow: 0 0 1pt 1pt #f78361;
-  -webkit-box-shadow: 0 0 1pt 1pt #f78361;
+  box-shadow: 0 0 1pt 1pt white;
+  -webkit-box-shadow: 0 0 1pt 1pt white;
 }
 
 textarea:focus,
@@ -559,7 +586,7 @@ li svg {
 }
 .mouse::after {
   left: 8px;
-  border-top-color: #242a38; /*Match background colour*/
+  border-top-color: #1d262f; /*Match background colour*/
 }
 
 @keyframes scroll {
@@ -578,18 +605,13 @@ li svg {
   height: 100vh;
   position: absolute;
   z-index: -1;
-  background-image: linear-gradient(45deg, #242a38, #181d29);
+  background-image: linear-gradient(45deg, #262f38, #0e171f);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .skills-list li:nth-child(odd) {
-  background-color: #4e596fbb;
+  background-color: #3c4f63;
   overflow: hidden;
   position: relative;
-}
-
-.here {
-  width: 100%;
-  height: 100%;
 }
