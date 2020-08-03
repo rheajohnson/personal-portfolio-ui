@@ -1,0 +1,83 @@
+/*
+social
+*/
+
+.social-nav {
+  font-size: 28px;
+  display: flex;
+  height: 80px;
+  width: 164px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-nav svg {
+  cursor: pointer;
+}
+
+.social-nav svg:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+footer {
+  border-top: 1px solid #2e2e30;
+  background-color: #0f0f0f;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-statement {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0;
+}
+
+.contact-statement {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-statement h4 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 16px 0;
+}
+
+.contact-statement a {
+  text-decoration: none;
+  position: relative;
+}
+
+.contact-statement .email-link {
+  color: #fb6156;
+}
+
+.contact-statement .email-link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #fb6156;
+}
+
+hr {
+  width: 80%;
+  border-color: #2e2e30;
+}
+
+.copyright {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: #747474;
+  font-weight: 500;
+}

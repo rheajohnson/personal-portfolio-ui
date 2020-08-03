@@ -1,0 +1,28 @@
+.App {
+  display: grid;
+  grid-template-rows: 88px 1fr auto;
+  height: auto;
+}
+
+.page-container {
+  grid-row: 2;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 180px);
+}
+
+.header {
+  grid-row: 1;
+}
+
+.nav {
+  grid-row: 1;
+}
+
+footer {
+  grid-row: 3;
+}

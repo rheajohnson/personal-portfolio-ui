@@ -1,0 +1,41 @@
+.logo {
+  width: 40px;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #2e2e30;
+  height: 88px;
+  background-color: #121212;
+  z-index: 999;
+  width: 100%;
+}
+
+.brand-container {
+  display: flex;
+  padding-left: 80px;
+}
+
+.name-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name-container * {
+  margin: 1px 0;
+  padding: 0 16px;
+  letter-spacing: 0.06em;
+}
+
+.name-container h4 {
+  font-weight: 300;
+}
+
+*:focus {
+  outline: none;
+}

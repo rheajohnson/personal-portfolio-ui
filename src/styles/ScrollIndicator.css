@@ -1,0 +1,36 @@
+.mouse {
+  position: absolute;
+  bottom: 16px;
+  left: calc(50% - 8px);
+  transform: translate(-50%, 0);
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  animation: scroll 1s infinite alternate;
+}
+
+.mouse::before,
+.mouse::after {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent; /*adjust size*/
+}
+.mouse::before {
+  left: 0;
+  border: 16px solid transparent;
+  border-top-color: white;
+  opacity: 0.7;
+}
+.mouse::after {
+  left: 8px;
+  border-top-color: #1d262f; /*Match background colour*/
+}
+
+@keyframes scroll {
+  100% {
+    transform: translate(-50%, 12px);
+  }
+}
