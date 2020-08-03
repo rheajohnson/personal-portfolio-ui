@@ -19,6 +19,10 @@
   padding-left: 80px;
 }
 
+.brand-container:hover {
+  cursor: pointer;
+}
+
 .name-container {
   height: 100%;
   display: flex;

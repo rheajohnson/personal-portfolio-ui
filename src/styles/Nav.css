@@ -141,3 +141,20 @@
   width: 0%;
   left: 50%;
 }
+
+.page-transition {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  z-index: 1001;
+  background-color: #0f0f0f;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-transition.loading {
+  top: 0;
+}

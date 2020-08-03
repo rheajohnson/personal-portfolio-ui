@@ -6,7 +6,13 @@ import MobileNav from "../components/MobileNav";
 export default function Header({ setActive, active }) {
   return (
     <header className="header">
-      <div className="brand-container">
+      <div
+        role="button"
+        tabIndex={0}
+        className="brand-container"
+        onKeyDown={() => setActive(0)}
+        onClick={() => setActive(0)}
+      >
         <img src={Logo} className="logo" alt="Ryan Johnson - Developer" />
         <div className="name-container">
           <h3>Ryan Johnson</h3>
