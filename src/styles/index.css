@@ -222,17 +222,16 @@ Work
     padding: 0 5vw;
   }
 
-  .nav {
-    display: none;
-  }
-
-  .nav-mobile {
-    display: block;
-  }
-
   .contact-statement {
     font-size: 0.8rem;
     width: 100%;
   }
 
+  .nav {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block !important;
+  }
 }
