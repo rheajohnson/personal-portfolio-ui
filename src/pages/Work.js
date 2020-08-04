@@ -26,7 +26,7 @@ export default React.memo(function Work() {
         </div>
         <div className="work-copy">
           <div className="work-copy-container">
-            <h3>Meteorite App</h3>
+            <h3>Meteor Explorer</h3>
             <p>
               A simple app that provides data on meteors. I used NodeJS with
               GraphQL to fetch data from a public API that provides meteorite
