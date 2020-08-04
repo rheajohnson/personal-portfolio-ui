@@ -5,7 +5,7 @@ social
 .social-nav {
   font-size: 1.1rem;
   display: flex;
-  height: 2rem;
+  height: 100%;
   width: 4rem;
   align-items: center;
   justify-content: space-between;
@@ -21,6 +21,7 @@ social
 }
 
 footer {
+  padding: 1rem 0;
   border-top: 1px solid #2e2e30;
   height: 100%;
   background-color: #0f0f0f;
@@ -41,7 +42,7 @@ footer {
   letter-spacing: 1px;
   text-align: center;
   line-height: 1.5rem;
-  margin: 1.5rem 5vw;
+  margin: 1rem 5vw;
 }
 
 .contact-statement a {
@@ -73,6 +74,5 @@ footer {
   font-weight: 500;
   display: flex;
   align-items: center;
-  height: 3rem;
-  margin: 0;
+  margin: 2rem 0.5rem 0rem;
 }
