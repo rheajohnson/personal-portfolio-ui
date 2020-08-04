@@ -7,8 +7,8 @@ export default function Header({ setActive, active }) {
   const [menu, setMenu] = useState(false);
 
   const setMenuDelay = (state) => {
-    setTimeout(() => setMenu(state), 400)
-  }
+    setTimeout(() => setMenu(state), 400);
+  };
 
   return (
     <>
@@ -31,13 +31,22 @@ export default function Header({ setActive, active }) {
       </header>
       <div className={`menu-transition ${menu ? "open" : ""}`}>
         <ul className="nav-mobile-menu">
+          <div
+            id="close-icon"
+            role="button"
+            onClick={() => setMenu(false)}
+            onKeyDown={() => setMenu(false)}
+            tabIndex={0}
+          >
+            <span></span>
+            <span></span>
+          </div>
           <li>
             <a
               onClick={() => {
-                setActive(0)
-                setMenuDelay(false)
-                }
-              }
+                setActive(0);
+                setMenuDelay(false);
+              }}
               onKeyDown={() => setActive(0)}
             >
               Work
@@ -46,10 +55,9 @@ export default function Header({ setActive, active }) {
           <li>
             <a
               onClick={() => {
-                setActive(1)
-                setMenuDelay(false)
-                }
-              }
+                setActive(1);
+                setMenuDelay(false);
+              }}
               onKeyDown={() => setActive(2)}
             >
               About
@@ -58,10 +66,9 @@ export default function Header({ setActive, active }) {
           <li>
             <a
               onClick={() => {
-                setActive(2)
-                setMenuDelay(false)
-                }
-              }
+                setActive(2);
+                setMenuDelay(false);
+              }}
               onKeyDown={() => setActive(1)}
             >
               Resume
