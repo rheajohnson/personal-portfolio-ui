@@ -1,17 +1,3 @@
 .App {
   height: auto;
 }
-
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.page-container {
-  padding-top: 88px;
-}
-
-.content {
-  min-height: calc(100vh - 180px);
-}

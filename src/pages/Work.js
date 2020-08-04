@@ -3,13 +3,10 @@ import Button from "../components/Button";
 import app1 from "../assets/app1.jpg";
 
 export default React.memo(function Work() {
-  const testFunction = () => {
-    console.log("I HEAR YOU");
-  };
   return (
     <div className="page-container">
-      <div className="content">
-        <div className="main-content">
+      <div className="fold-content-container">
+        <div className="fold-content">
           <h1>
             Hi. I&apos;m Ryan, a Full-Stack Developer passionate about
             technology and creating real-world solutions.
@@ -33,8 +30,8 @@ export default React.memo(function Work() {
               a pretium mi sem ut ipsum.
             </p>
             <div className="work-action-container">
-              <Button label="demo" callback={testFunction} />
-              <Button label="Source" callback={testFunction} />
+              <Button label="demo" />
+              <Button label="Source" />
             </div>
           </div>
         </div>

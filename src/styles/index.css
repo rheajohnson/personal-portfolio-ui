@@ -11,11 +11,27 @@ html {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   color: white;
+  background-color: #121212;
+  font-size: 30px;
 }
 
 body {
   padding: 0;
   margin: 0;
+}
+
+/*
+highlight
+*/
+
+::selection {
+  color: #121212;
+  background: rgba(255, 255, 255, 0.996);
+}
+
+::-moz-selection {
+  background: white;
+  color: #121212;
 }
 
 /*
@@ -25,93 +41,55 @@ fonts
 p {
   cursor: default;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 0.4px;
+  font-size: 0.6em;
+  line-height: 1rem;
+  letter-spacing: 1px;
 }
 
 h1 {
-  letter-spacing: 1.2px;
-  line-height: 72px;
-  font-size: 48px;
-  max-width: 940px;
-}
-
-h2 {
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  font-size: 24px;
-  position: relative;
-  font-weight: 900;
-}
-
-h2:after {
-  content: "";
-  width: 40px;
-  height: 6px;
-  background-image: linear-gradient(270deg, #fb6156, #ef3636);
-  position: absolute;
-  top: 44px;
-  left: 0;
-}
-
-/*
-main
-*/
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6;
-  font-size: 16px;
-  letter-spacing: 0.4px;
-  line-height: 24px;
-  display: flex;
-}
-
-.main-content p:last-of-type {
-  margin-bottom: 32px;
-}
-
-.main-content p:first-of-type {
-  margin-top: 32px;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6;
-  font-size: 18px;
-  letter-spacing: 0.4px;
-  line-height: 32px;
-  display: flex;
-  margin: 0 240px;
-  font-weight: 300;
-}
-
-.about-content p:last-of-type {
-  margin-bottom: 48px;
+  letter-spacing: 1px;
+  line-height: 2.3rem;
+  font-size: 1.85rem;
+  max-width: 32rem;
 }
 
 a {
   color: white;
 }
 
+/*
+main
+*/
+
+.fold-content-container {
+  height: calc(100vh - 5.5rem);
+  min-height: 14rem;
+  display: flex;
+  align-items: center;
+}
+
+.fold-content {
+  max-width: 960px;
+}
+
+.about-content-container {
+  height: calc(100vh - 2rem);
+  min-height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 640px;
+}
+
+
 .about-content a {
   color: #fb6156;
   text-decoration: none;
   position: relative;
   font-weight: 400;
-}
-
-.main-content a {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 700;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  transition: 0.2s;
 }
 
 /*
@@ -121,42 +99,42 @@ Work
 .page-container {
   background-color: #121212;
   padding: 0 10vw;
-  min-height: calc(100vh - 88px);
+  margin-top: 3rem;
 }
 
 .work-divider {
   border-top: 1px solid #2e2e30;
   width: 100%;
-  height: 64px;
+  height: 2rem;
   display: flex;
   align-items: center;
 }
 
 .work-divider h4 {
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-size: 16px;
+  letter-spacing: 0.8px;
+  font-size: 0.5rem;
   position: relative;
   z-index: 10;
-  top: 12px;
-  left: 8px;
+  top: 0.4rem;
+  left: 0.3rem;
 }
 
 .work-divider h4:after {
   content: "";
-  width: 136px;
-  height: 16px;
+  width: 4.1rem;
+  height: 0.5rem;
   position: absolute;
   background-color: #2e2e30;
-  left: -8px;
-  top: 4px;
-  z-index: -100;
+  left: -0.3rem;
+  top: 0.15rem;
+  z-index: -1;
 }
 
 .work-item {
   width: 100%;
   display: flex;
-  padding: 120px 0;
+  padding: 3rem 0;
 }
 
 .work-item:not(:last-of-type) {
@@ -164,8 +142,7 @@ Work
 }
 
 .work-item h3 {
-  font-size: 36px;
-  letter-spacing: 1.1px;
+  font-size: 1.2rem;
   text-transform: capitalize;
   margin-top: 0;
 }
@@ -182,7 +159,7 @@ Work
 }
 
 .work-action-container button:not(:first-of-type) {
-  margin-left: 24px;
+  margin-left: 1rem;
 }
 
 .work-visual {
@@ -191,7 +168,7 @@ Work
 }
 
 .work-mock-image {
-  width: 80%;
+  max-width: 17rem;
 }
 
 .side-content {
@@ -205,15 +182,57 @@ Work
 }
 
 .work-item p {
-  margin: 24px 0 32px;
+  margin: 1rem 0 1.4rem;
 }
 
-::selection {
-  color: #121212;
-  background: rgba(255, 255, 255, 0.996);
+@media only screen and (max-width: 1200px) {
+  .page-container {
+    padding: 0 5vw;
+  }
 }
 
-::-moz-selection {
-  background: white;
-  color: #121212;
+@media only screen and (max-width: 1100px) {
+  .work-item {
+    flex-direction: column;
+  }
+  .work-copy,
+  .work-visual {
+    width: 100%;
+  }
+
+  .work-mock-image {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 26px;
+  }
+
+  h1 {
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1.15rem;
+    max-width: 32rem;
+  }
+
+  .page-container {
+    padding: 0 5vw;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+
+  .contact-statement {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
 }

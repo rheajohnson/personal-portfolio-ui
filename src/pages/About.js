@@ -3,7 +3,7 @@ import React from "react";
 export default React.memo(function About() {
   return (
     <div className="page-container">
-      <div className={`content`}>
+      <div className="about-content-container">
         <div className="about-content">
           <h1>A little about me.</h1>
           <p>
