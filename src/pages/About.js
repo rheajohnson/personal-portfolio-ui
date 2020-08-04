@@ -18,7 +18,11 @@ export default React.memo(function About() {
             I always enjoy meeting new people and exploring opportunities. If
             you have a project that you want to get started, think you need my
             help with something, or just fancy saying hey — then email me at{" "}
-            <a href="" alt="">
+            <a
+              className="email-link"
+              href="mailto:rjohnsondev@protonmail.com"
+              alt="get-in-touch"
+            >
               rjohnsondev@protonmail.com
             </a>
             .

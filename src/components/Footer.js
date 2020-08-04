@@ -8,7 +8,11 @@ export default function Footer() {
         <h4>
           Have a project in mind?{" "}
           <span>
-            <a className="email-link" href="asd" alt="sd">
+            <a
+              className="email-link"
+              href="mailto:rjohnsondev@protonmail.com"
+              alt="get-in-touch"
+            >
               Get in touch!
             </a>
           </span>

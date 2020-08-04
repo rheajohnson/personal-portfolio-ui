@@ -1,15 +1,11 @@
 import React from "react";
-import {
-  AiOutlineLinkedin,
-  AiOutlineGithub,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
 
 export default function SocialNav() {
   return (
     <div className="social-nav">
       <a
-        href="https://github.com/rjohnson91"
+        href="https://www.linkedin.com/in/ryanjohnsondev"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -21,13 +17,6 @@ export default function SocialNav() {
         rel="noopener noreferrer"
       >
         <AiOutlineGithub />
-      </a>
-      <a
-        href="https://github.com/rjohnson91"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <AiOutlineMail />
       </a>
     </div>
   );
