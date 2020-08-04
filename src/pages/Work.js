@@ -30,8 +30,8 @@ export default React.memo(function Work() {
             <p>
               A simple app that provides data on meteors. I used NodeJS with
               GraphQL to fetch data from a public API that provides meteorite
-              information. React was for the frontend, along with the Ant Design
-              UI library.
+              information. React was used for the frontend, along with the Ant
+              Design UI library.
             </p>
             <div className="work-action-container">
               <Button
