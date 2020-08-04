@@ -7,9 +7,11 @@ export default function Footer() {
       <span className="contact-statement">
         <h4>
           Have a project in mind?{" "}
-          <a className="email-link" href="asd" alt="sd">
-            Get in touch!
-          </a>
+          <span>
+            <a className="email-link" href="asd" alt="sd">
+              Get in touch!
+            </a>
+          </span>
         </h4>
 
         <SocialNav />

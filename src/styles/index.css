@@ -61,9 +61,13 @@ a {
 main
 */
 
+ul {
+  padding-inline-start: 0;
+}
+
 .fold-content-container {
-  height: calc(100vh - 5.5rem);
-  min-height: 14rem;
+  min-height: calc(100vh - 6.5rem);
+  margin: 1rem 0;
   display: flex;
   align-items: center;
 }
@@ -73,8 +77,8 @@ main
 }
 
 .about-content-container {
-  height: calc(100vh - 2rem);
-  min-height: 14rem;
+  min-height: calc(100vh - 4rem);
+  margin: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +102,7 @@ Work
 .page-container {
   background-color: #121212;
   padding: 0 10vw;
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 
 .work-divider {

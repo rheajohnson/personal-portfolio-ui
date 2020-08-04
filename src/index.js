@@ -5,7 +5,7 @@ import "./styles/index.css";
 import "./styles/Layout.css";
 import "./styles/Header.css";
 import "./styles/Nav.css";
-import "./styles/Social.css";
+import "./styles/Footer.css";
 import "./styles/Button.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));

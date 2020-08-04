@@ -5,7 +5,7 @@ social
 .social-nav {
   font-size: 1.1rem;
   display: flex;
-  height: 2.8rem;
+  height: 2rem;
   width: 7rem;
   align-items: center;
   justify-content: space-between;
@@ -22,6 +22,7 @@ social
 
 footer {
   border-top: 1px solid #2e2e30;
+  height: 100%;
   background-color: #0f0f0f;
   flex-direction: column;
   display: flex;
@@ -33,19 +34,14 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 1.5rem 0;
-}
-
-.contact-statement {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 .contact-statement h4 {
-  font-size: 1.08em;
+  font-size: 1rem;
   letter-spacing: 1px;
-  margin: 0.5rem 0;
+  text-align: center;
+  line-height: 1.5rem;
+  margin: 1.5rem 5vw;
 }
 
 .contact-statement a {
@@ -66,17 +62,17 @@ footer {
   background-color: #fb6156;
 }
 
-hr {
-  width: 80%;
-  border-color: #2e2e30;
+.contact-statement span {
+  display: inline-block;
 }
 
 .copyright {
   font-size: 0.47rem;
   letter-spacing: 1px;
-  height: 1rem;
-  display: flex;
-  align-items: center;
   color: #747474;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  margin: 0;
 }

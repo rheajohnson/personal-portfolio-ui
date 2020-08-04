@@ -24,10 +24,10 @@ export default React.memo(function Work() {
           <div className="work-copy-container">
             <h3>Meteorite App</h3>
             <p>
-              Aenean commodo ligula eget dolor. Phasellus tempus. Aenean tellus
-              metus, bibendum sed, posuere ac, mattis non, nunc. Praesent
-              porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor,
-              a pretium mi sem ut ipsum.
+              A simple app that provides data on meteors through the years. I
+              used NodeJS with GraphQL to fetch data from a public API that
+              provides meteorite information. React was for the frontend, along
+              with the Ant Design UI library.
             </p>
             <div className="work-action-container">
               <Button label="demo" />
