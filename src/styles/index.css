@@ -84,7 +84,6 @@ main
   max-width: 640px;
 }
 
-
 .about-content a {
   color: #fb6156;
   text-decoration: none;
@@ -204,6 +203,11 @@ Work
     width: 100%;
     padding-bottom: 1rem;
   }
+
+  h1 {
+    font-size: 1.6rem;
+    max-width: 30rem;
+  }
 }
 
 @media only screen and (max-width: 960px) {
@@ -231,7 +235,7 @@ Work
     display: none;
   }
 
-  .nav-mobile {
+  .nav-mobile-icon {
     display: block !important;
   }
 }

@@ -45,7 +45,7 @@ footer {
 .contact-statement h4 {
   font-size: 1.08em;
   letter-spacing: 1px;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .contact-statement a {
@@ -72,7 +72,7 @@ hr {
 }
 
 .copyright {
-  font-size: .47rem;
+  font-size: 0.47rem;
   letter-spacing: 1px;
   height: 1rem;
   display: flex;
