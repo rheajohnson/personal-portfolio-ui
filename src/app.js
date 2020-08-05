@@ -13,6 +13,14 @@ const App = () => {
   }, [active]);
 
   useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [loading]);
+
+  useEffect(() => {
     setTimeout(() => {
       scrollUp();
       setLoading(false);

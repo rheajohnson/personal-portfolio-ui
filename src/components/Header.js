@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/logo.svg";
 import NavList from "../components/NavList";
 import MobileNav from "../components/MobileNav";
@@ -9,6 +9,14 @@ export default function Header({ setActive, active }) {
   const setMenuDelay = (state) => {
     setTimeout(() => setMenu(state), 400);
   };
+
+  useEffect(() => {
+    if (menu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [menu]);
 
   return (
     <>
