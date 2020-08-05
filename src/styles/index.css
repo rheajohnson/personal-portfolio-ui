@@ -21,6 +21,11 @@ body {
   padding-right: 0.2rem;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.2);
+}
+
 body::-webkit-scrollbar {
   width: 0.2rem;
 }
