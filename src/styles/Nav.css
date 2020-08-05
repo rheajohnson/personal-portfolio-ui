@@ -112,17 +112,51 @@
   position: fixed;
   height: 100%;
   width: 100%;
-  top: 100%;
   z-index: 1001;
-  background-color: #0f0f0f;
-  transition: 0.5s ease-in-out;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.page-transition.loading {
+.page-transition div {
+  position: fixed;
+  height: 20vh;
+  width: 100%;
   top: 0;
+  left: 100%;
+  z-index: 1001;
+  background-color: #1e1e1e;
+}
+
+.page-transition.loading div {
+  left: 0;
+}
+
+.page-transition div:nth-child(1) {
+  transition: 0.4s ease-in-out;
+  transition-delay: 0.2s;
+}
+
+.page-transition div:nth-child(2) {
+  top: 20vh;
+  transition: 0.4s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.page-transition div:nth-child(3) {
+  top: 40vh;
+  transition: 0.4s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.page-transition div:nth-child(4) {
+  top: 60vh;
+  transition: 0.4s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.page-transition div:nth-child(5) {
+  top: 80vh;
+  transition: 0.4s ease-in-out;
+  transition-delay: 0.6s;
 }
 
 .menu-transition {
@@ -132,7 +166,7 @@
   left: 100%;
   z-index: 100;
   top: 0;
-  background-color: #0f0f0f;
+  background-color: #1e1e1e;
   transition: 0.3s ease-in-out;
   display: flex;
   align-items: center;

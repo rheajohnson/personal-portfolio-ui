@@ -56,7 +56,13 @@ const App = () => {
         {renderPage()}
         <Footer />
       </div>
-      <div className={`page-transition ${loading ? "loading" : ""}`} />
+      <div className={`page-transition ${loading ? "loading" : ""}`}>
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
     </>
   );
 };
