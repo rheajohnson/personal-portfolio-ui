@@ -7,7 +7,7 @@ export default function Header({ setActive, active }) {
   const [menu, setMenu] = useState(false);
 
   const setMenuDelay = (state) => {
-    setTimeout(() => setMenu(state), 400);
+    setTimeout(() => setMenu(state), 0);
   };
 
   useEffect(() => {

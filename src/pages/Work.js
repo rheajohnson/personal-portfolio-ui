@@ -22,7 +22,7 @@ export default React.memo(function Work() {
       </div>
       <div className="work-item">
         <div className="work-visual">
-          <img src={app1} className="work-mock-image" />
+          <img src={app1} alt="app1 mock visual" className="work-mock-image" />
         </div>
         <div className="work-copy">
           <div className="work-copy-container">
