@@ -59,7 +59,7 @@ const App = () => {
 
   return (
     <>
-      <div classNameName="App">
+      <div className="App">
         <Header setActive={setActiveDelay} active={active} />
         {renderPage()}
         <Footer />

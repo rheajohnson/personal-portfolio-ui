@@ -22,9 +22,9 @@ social
 
 footer {
   padding: 1rem 0;
-  border-top: 1px solid #1e1e1e;
+  border-top: 1px solid #2a282e;
   height: 100%;
-  background-color: #0f0f0f;
+  background-color: #121417;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -51,16 +51,14 @@ footer {
 }
 
 .contact-statement .email-link {
-  color: #fb6156;
+  color: #5dffce;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
-.contact-statement .email-link:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #fb6156;
+.contact-statement .email-link:hover {
+  opacity: 0.7;
 }
 
 .contact-statement span {
