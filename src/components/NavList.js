@@ -22,7 +22,7 @@ export default React.memo(function About({ setActive, active }) {
             About
           </a>
         </li>
-        <li className={`nav-list-item ${active === 2 && "active"}`}>
+        {/* <li className={`nav-list-item ${active === 2 && "active"}`}>
           <a
             className="nav-link"
             onClick={() => setActive(2)}
@@ -30,7 +30,7 @@ export default React.memo(function About({ setActive, active }) {
           >
             Resume
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
