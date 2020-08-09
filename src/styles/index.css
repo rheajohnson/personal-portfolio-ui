@@ -22,6 +22,10 @@ body {
 
 .App {
   height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 * {
@@ -94,7 +98,7 @@ ul {
 .fold-content-container {
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 11rem);
+  min-height: calc(100vh - 10rem);
   padding: 2rem 0;
 }
 
@@ -106,8 +110,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 9rem);
   padding: 2rem 0;
+  min-height: calc(100vh - 10rem);
 }
 
 .about-content {
@@ -270,9 +274,5 @@ Work
 
   .nav-mobile-icon {
     display: block !important;
-  }
-
-  .fold-content-container {
-    min-height: calc(100vh - 14rem);
   }
 }
