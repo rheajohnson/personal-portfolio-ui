@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../assets/logo.svg";
 import NavList from "../components/NavList";
-import MobileNav from "../components/MobileNav";
+import MobileNavButton from "./MobileNavButton";
+import MobileNavMenu from "./MobileNavMenu";
 
 export default function Header({ setActive, active }) {
   const [menu, setMenu] = useState(false);
@@ -35,55 +36,14 @@ export default function Header({ setActive, active }) {
           </div>
         </div>
         <NavList setActive={setActive} active={active} />
-        <MobileNav setMenu={setMenu} menu={menu} />
+        <MobileNavButton setMenu={setMenu} menu={menu} />
+        <MobileNavMenu
+          setActive={setActive}
+          setMenuDelay={setMenuDelay}
+          setMenu={setMenu}
+          menu={menu}
+        />
       </header>
-      <div className={`menu-transition ${menu ? "open" : ""}`}>
-        <ul className="nav-mobile-menu">
-          <div
-            id="close-icon"
-            role="button"
-            onClick={() => setMenu(false)}
-            onKeyDown={() => setMenu(false)}
-            tabIndex={0}
-          >
-            <span></span>
-            <span></span>
-          </div>
-          <li>
-            <a
-              onClick={() => {
-                setActive(0);
-                setMenuDelay(false);
-              }}
-              onKeyDown={() => setActive(0)}
-            >
-              Work
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => {
-                setActive(1);
-                setMenuDelay(false);
-              }}
-              onKeyDown={() => setActive(2)}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => {
-                setActive(2);
-                setMenuDelay(false);
-              }}
-              onKeyDown={() => setActive(1)}
-            >
-              Resume
-            </a>
-          </li>
-        </ul>
-      </div>
     </>
   );
 }
