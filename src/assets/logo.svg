@@ -1,7 +1,4 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M48 12L48 0L36 12L48 12Z" fill="white"/>
-<path d="M1.57361e-06 36L0 48L12 36L1.57361e-06 36Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 12V48L12 36V12H24L36 0H12L0 12ZM48 0L36 12V36H24L12 48H36L48 36V0Z" fill="white"/>
-<path d="M36 36L36 48L48 36L36 36Z" fill="#DADADA"/>
-<path d="M12 12L12 0L-5.24537e-07 12L12 12Z" fill="#DADADA"/>
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 24V96L24 72V24H48L72 0H24L0 24ZM48 72L24 96L72 96L96 72V0L72 24V72H48Z" fill="white"/>
+<rect x="60" y="36" width="24" height="24" transform="rotate(90 60 36)" fill="white"/>
 </svg>
