@@ -11,7 +11,7 @@ html {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   color: white;
-  background-color: #181b1e;
+  background-color: #202225;
   font-size: 30px;
 }
 
@@ -50,13 +50,13 @@ highlight
 */
 
 ::selection {
-  color: #181b1e;
+  color: #202225;
   background: rgba(255, 255, 255, 0.996);
 }
 
 ::-moz-selection {
   background: white;
-  color: #181b1e;
+  color: #202225;
 }
 
 /*
@@ -90,7 +90,7 @@ ul {
 }
 
 .page-container {
-  background-color: #181b1e;
+  background-color: #202225;
   padding: 0 10vw;
   margin-top: 3rem !important;
 }
@@ -142,7 +142,7 @@ Work
 */
 
 .work-divider {
-  border-top: 1px solid #2a282e;
+  border-top: 1px solid #2f3136;
   width: 100%;
   height: 2rem;
   display: flex;
@@ -164,7 +164,7 @@ Work
   width: 5rem;
   height: 0.6rem;
   position: absolute;
-  background-color: #2a282e;
+  background-color: #2f3136;
   left: -0.3rem;
   top: 0.3rem;
   z-index: -1;
@@ -177,7 +177,7 @@ Work
 }
 
 .work-item:not(:last-of-type) {
-  border-bottom: 1px solid #2a282e;
+  border-bottom: 1px solid #2f3136;
 }
 
 .work-item h3 {

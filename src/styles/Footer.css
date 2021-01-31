@@ -22,9 +22,9 @@ social
 
 footer {
   padding: 1rem 0;
-  border-top: 1px solid #2a282e;
+  border-top: 1px solid #2f3136;
   height: 100%;
-  background-color: #121417;
+  background-color: #202225;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@ footer {
 }
 
 .contact-statement h4 {
-  font-size: 1rem;
+  font-size: .8rem;
   letter-spacing: 1px;
   text-align: center;
   line-height: 1.5rem;
@@ -66,7 +66,7 @@ footer {
 }
 
 .copyright {
-  font-size: 0.47rem;
+  font-size: 0.4rem;
   letter-spacing: 1px;
   color: #747474;
   font-weight: 500;

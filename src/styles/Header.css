@@ -7,12 +7,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.01rem solid #2a282e;
+  border-bottom: 0.01rem solid #2f3136;
   height: 3rem;
   top: 0;
-  background-color: #181b1e;
+  background-color: #202225;
   z-index: 999;
   width: 100%;
+}
+
+.page-container h1, .page-container h2, .page-container h3, .page-container h4 {
+  cursor: default;
 }
 
 .brand-container {
