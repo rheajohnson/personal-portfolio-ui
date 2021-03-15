@@ -142,7 +142,7 @@ button:active {
   outline: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 876px) {
   html {
     font-size: 9px;
   }
