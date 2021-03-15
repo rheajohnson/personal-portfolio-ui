@@ -1,57 +1,44 @@
 import React from "react";
-import Button from "../components/Button";
+import WorkPost from "../components/work-post";
 import app1 from "../assets/app1.png";
 
 export default React.memo(function Work() {
-  const openInNewTab = (url) => {
-    const win = window.open(url, "_blank");
-    win.focus();
-  };
   return (
-    <div className="page-container">
-      <div className="fold-content-container">
-        <div className="fold-content">
-          <h1>
-            Hi. I&apos;m Ryan, a Full-Stack Developer passionate about
-            technology and creating real-world solutions.
-          </h1>
-        </div>
-      </div>
-      <div className="work-divider">
-        <h4>Featured work</h4>
-      </div>
-      <div className="work-item">
-        <div className="work-visual">
-          <img src={app1} alt="app1 mock visual" className="work-mock-image" />
-        </div>
-        <div className="work-copy">
-          <div className="work-copy-container">
-            <h3>Meteor Explorer</h3>
-            <p>
-              A simple app that provides data on meteors. I used NodeJS with
-              GraphQL to fetch data from a public API that provides meteorite
-              information. React was used for the frontend, along with the Ant
-              Design UI library.
-            </p>
-            <div className="work-action-container">
-              <Button
-                label="demo"
-                callback={() =>
-                  openInNewTab("https://salty-badlands-74689.herokuapp.com/")
-                }
-              />
-              <Button
-                label="Source"
-                callback={() =>
-                  openInNewTab(
-                    "https://github.com/rjohnson91/meteorite-explorer-app"
-                  )
-                }
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <section className="fold">
+        <h1>
+          Hey. I&apos;m Ryan, a full-stack developer passionate about technology
+          and creating real-world solutions.
+        </h1>
+      </section>
+      <section className="work">
+        <section className="sub-header">
+          <h3>Featured work</h3>
+        </section>
+        <WorkPost
+          title="Reddit Finance Scraper"
+          copy={
+            <>
+              <p>
+                A serverless app that scrapes popular finance subreddits every
+                few minutes for analysis. The most mentioned tickers are
+                identified, as well as the sentiment users had towards them.
+                Updates are made in real-time (no need to refresh).
+              </p>
+              <p>
+                Built using AWS Lambdas, AppSync, a GraphQL API, and React. The
+                infrastructure is managed with AWS CDK. Visit the GitHub repo
+                for more details.
+              </p>
+            </>
+          }
+          buttonOneLabel="Demo"
+          buttonTwoLabel="GitHub"
+          image={app1}
+          buttonOneLink="https://www.financescraper.ryanjohnsondev.com"
+          buttonTwoLink="https://github.com/rjohnson91/reddit-finance-analysis-ui"
+        />
+      </section>
+    </>
   );
 });

@@ -1,25 +1,22 @@
 import React from "react";
-import SocialNav from "../components/SocialNav";
+import SocialNav from "./social-nav";
 
 export default function Footer() {
   return (
     <footer>
-      <span className="contact-statement">
-        <h4>
+      <span>
+        <h3>
           Have a project in mind?{" "}
-          <span>
-            <a
-              className="email-link"
-              href="mailto:rjohnsondev@protonmail.com"
-              alt="get-in-touch"
-            >
-              Get in touch!
-            </a>
-          </span>
-        </h4>
-
-        <SocialNav />
+          <a
+            className="email-link"
+            href="mailto:rjohnsondev@protonmail.com"
+            alt="get-in-touch"
+          >
+            Get in touch!
+          </a>
+        </h3>
       </span>
+      <SocialNav />
       <p className="copyright"> © 2020 Ryan Johnson</p>
     </footer>
   );

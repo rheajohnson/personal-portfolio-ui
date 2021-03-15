@@ -1,0 +1,10 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 12rem);
+  min-height: 400px;
+  max-width: 720px;
+  margin: auto;
+  padding: 6.4rem 0;
+}

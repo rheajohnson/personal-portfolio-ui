@@ -1,47 +1,50 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../assets/logo.svg";
-import NavList from "../components/NavList";
-import MobileNavButton from "./MobileNavButton";
-import MobileNavMenu from "./MobileNavMenu";
+import MainNav from "./main-nav";
+import MobileNavButton from "./mobile-nav-button";
+import MobileNavMenu from "./mobile-nav-menu";
 
-export default function Header({ setActive, active }) {
-  const [menu, setMenu] = useState(false);
+export default function Header({ setActivePage, page }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const setMenuDelay = (state) => {
-    setTimeout(() => setMenu(state), 0);
+    setTimeout(() => setMobileMenuOpen(state), 0);
   };
 
   useEffect(() => {
-    if (menu) {
+    if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
-  }, [menu]);
+  }, [mobileMenuOpen]);
 
   return (
     <>
-      <header className="header">
+      <header>
         <div
           role="button"
           tabIndex={0}
-          className="brand-container"
-          onKeyDown={() => setActive(0)}
-          onClick={() => setActive(0)}
+          className="logo-container"
+          onKeyDown={() => setActivePage(0)}
+          onClick={() => setActivePage(0)}
         >
-          <img src={Logo} className="logo" alt="Ryan Johnson - Developer" />
-          <div className="name-container">
+          <img src={Logo} alt="Ryan Johnson - Developer" />
+          <div className="logo-container-signature">
             <h3>Ryan Johnson</h3>
             <h4>Developer</h4>
           </div>
         </div>
-        <NavList setActive={setActive} active={active} />
-        <MobileNavButton setMenu={setMenu} menu={menu} />
+        <MainNav setActivePage={setActivePage} page={page} />
+        <MobileNavButton
+          setMobileMenuOpen={setMobileMenuOpen}
+          mobileMenuOpen={mobileMenuOpen}
+        />
         <MobileNavMenu
-          setActive={setActive}
+          setActivePage={setActivePage}
           setMenuDelay={setMenuDelay}
-          setMenu={setMenu}
-          menu={menu}
+          setMobileMenuOpen={setMobileMenuOpen}
+          mobileMenuOpen={mobileMenuOpen}
         />
       </header>
     </>

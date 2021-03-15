@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
-import Work from "./pages/Work";
-import About from "./pages/About";
-import Footer from "./components/Footer";
+import Header from "./components/header";
+import Work from "./pages/work";
+import About from "./pages/about";
+import Footer from "./components/footer";
+import PageTransition from "./components/page-transition";
+import scrollUp from "./helper/scroll-up";
 
 const App = () => {
-  const [active, setActive] = useState(0);
+  const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    scrollUp();
-  }, [active]);
+    setTimeout(() => {
+      scrollUp();
+      setLoading(false);
+    }, 1200);
+  }, []);
 
   useEffect(() => {
     if (loading) {
@@ -20,56 +25,33 @@ const App = () => {
     }
   }, [loading]);
 
-  useEffect(() => {
+  const setActivePage = (page) => {
+    setLoading(true);
     setTimeout(() => {
-      scrollUp();
+      setPage(page);
       setLoading(false);
+      scrollUp();
     }, 1200);
-  }, []);
-
-  const scrollUp = () => {
-    try {
-      window.scroll({
-        top: 0,
-        left: 0,
-      });
-    } catch (error) {
-      window.scrollTo(0, 0);
-    }
   };
 
   const renderPage = () => {
-    return active === 0 ? (
-      <Work active={active} />
-    ) : active === 1 ? (
-      <About active={active} />
-    ) : (
-      <About active={active} />
-    );
-  };
-
-  const setActiveDelay = (page) => {
-    setLoading(true);
-    setTimeout(() => {
-      setActive(page);
-      setLoading(false);
-      scrollUp();
-    }, 1200);
+    switch (page) {
+      case 0:
+        return <Work page={page} />;
+      case 1:
+        return <About page={page} />;
+      default:
+        console.error("No case for page index: ", page);
+    }
   };
 
   return (
     <>
-      <div className="App">
-        <Header setActive={setActiveDelay} active={active} />
-        {renderPage()}
+      <div className="app">
+        <Header setActivePage={setActivePage} page={page} />
+        <main>{renderPage()}</main>
         <Footer />
-      </div>
-      <div className={`page-transition ${loading ? "loading" : ""}`}>
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
+        <PageTransition loading={loading} />
       </div>
     </>
   );

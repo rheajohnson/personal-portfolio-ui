@@ -1,0 +1,11 @@
+.fold {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2f3136;
+  height: calc(100vh - 25rem);
+  min-height: 400px;
+}
+
+.fold h1 {
+  max-width: 106rem;
+}
