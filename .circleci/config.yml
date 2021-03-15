@@ -132,13 +132,13 @@ workflows:
               only:
                 - master
 
-      # - eslint:
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
-      #     requires:
-      #       - npm-ci
+      - eslint:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - npm-ci
 
       - get-secrets:
           context: "context-aws-311638723712"

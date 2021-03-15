@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/header";
-import Work from "./pages/work";
-import About from "./pages/about";
-import Footer from "./components/footer";
-import PageTransition from "./components/page-transition";
-import scrollUp from "./helper/scroll-up";
+import Header from "components/header";
+import Work from "pages/work";
+import About from "pages/about";
+import Footer from "components/footer";
+import PageTransition from "components/page-transition";
+import scrollUp from "helper/scroll-up";
 
 const App = () => {
   const [page, setPage] = useState(0);

@@ -5,7 +5,7 @@ export default React.memo(function About() {
     <section className="about">
       <h1>A little about me.</h1>
       <p>
-        I&apos;m a Full-Stack Developer based in Boise, Idaho. I’m obsessed with
+        I&apos;m a full-stack developer based in Boise, Idaho. I’m obsessed with
         technology and enjoy creating applications that solve real-world
         problems. I’ve worked in a variety of roles with teams large and small
         to build awesome experiences. Outside of work, I enjoy reading, watching

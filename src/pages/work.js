@@ -1,6 +1,6 @@
 import React from "react";
-import WorkPost from "../components/work-post";
-import app1 from "../assets/app1.png";
+import WorkPost from "components/work-post";
+import app1 from "assets/app1.png";
 
 export default React.memo(function Work() {
   return (

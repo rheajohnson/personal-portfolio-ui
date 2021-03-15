@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../assets/logo.svg";
-import MainNav from "./main-nav";
-import MobileNavButton from "./mobile-nav-button";
-import MobileNavMenu from "./mobile-nav-menu";
+import Logo from "assets/logo.svg";
+import MainNav from "components/main-nav";
+import MobileNavButton from "components/mobile-nav-button";
+import MobileNavMenu from "components/mobile-nav-menu";
 
 export default function Header({ setActivePage, page }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

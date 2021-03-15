@@ -1,5 +1,5 @@
 import React from "react";
-import SocialNav from "./social-nav";
+import SocialNav from "components/social-nav";
 
 export default function Footer() {
   return (
