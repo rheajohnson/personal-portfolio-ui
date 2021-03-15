@@ -11,10 +11,10 @@ export default React.memo(function Work() {
           and creating real-world solutions.
         </h1>
       </section>
+      <section className="sub-header">
+        <h3>Featured work</h3>
+      </section>
       <section className="work">
-        <section className="sub-header">
-          <h3>Featured work</h3>
-        </section>
         <WorkPost
           title="Reddit Finance Scraper"
           copy={

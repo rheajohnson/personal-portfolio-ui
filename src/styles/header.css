@@ -19,8 +19,13 @@ logo
 */
 .logo-container {
   display: flex;
+  justify-content: space-between;
   margin-left: 5vw;
-  height: 60%;
+}
+
+.logo-container img {
+  height: 4rem;
+  width: auto;
 }
 
 .logo-container:hover {
