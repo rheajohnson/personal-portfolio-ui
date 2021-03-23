@@ -10,8 +10,11 @@ core
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: none;
+/*
+Allow focus on keyboard only
+*/
+.mousedown *:focus {
+  outline: 0;
 }
 
 .app {

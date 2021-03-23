@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import Header from "components/header";
 import Work from "pages/work";
 import About from "pages/about";
+import Contact from "pages/contact";
 import Footer from "components/footer";
 import PageTransition from "components/page-transition";
+import OutlineAccessibilityWrapper from "components/outline-accessibility-wrapper";
+
 import scrollUp from "helper/scroll-up";
 
 const App = () => {
@@ -37,23 +40,25 @@ const App = () => {
   const renderPage = () => {
     switch (page) {
       case 0:
-        return <Work page={page} />;
+        return <Work />;
       case 1:
-        return <About page={page} />;
+        return <About />;
+      case 2:
+        return <Contact />;
       default:
         console.error("No case for page index: ", page);
     }
   };
 
   return (
-    <>
+    <OutlineAccessibilityWrapper>
       <div className="app">
         <Header setActivePage={setActivePage} page={page} />
         <main>{renderPage()}</main>
         <Footer />
         <PageTransition loading={loading} />
       </div>
-    </>
+    </OutlineAccessibilityWrapper>
   );
 };
 

@@ -3,7 +3,6 @@ import { CloseOutlined } from "@ant-design/icons";
 
 export default function MobileNavMenu({
   setActivePage,
-  setMenuDelay,
   setMobileMenuOpen,
   mobileMenuOpen,
 }) {
@@ -14,7 +13,7 @@ export default function MobileNavMenu({
           role="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           onKeyDown={() => setMobileMenuOpen(!mobileMenuOpen)}
-          tabIndex={0}
+          tabIndex={-1}
           className="mobile-nav-icon-close"
         >
           <CloseOutlined />
@@ -23,11 +22,11 @@ export default function MobileNavMenu({
           <div
             onClick={() => {
               setActivePage(0);
-              setMenuDelay(false);
+              setMobileMenuOpen(false);
             }}
             onKeyDown={() => setActivePage(0)}
             role="button"
-            tabIndex={0}
+            tabIndex={-1}
           >
             Work
           </div>
@@ -36,13 +35,26 @@ export default function MobileNavMenu({
           <div
             onClick={() => {
               setActivePage(1);
-              setMenuDelay(false);
+              setMobileMenuOpen(false);
+            }}
+            onKeyDown={() => setActivePage(1)}
+            role="button"
+            tabIndex={-1}
+          >
+            About
+          </div>
+        </li>
+        <li>
+          <div
+            onClick={() => {
+              setActivePage(2);
+              setMobileMenuOpen(false);
             }}
             onKeyDown={() => setActivePage(2)}
             role="button"
-            tabIndex={0}
+            tabIndex={-1}
           >
-            About
+            Contact
           </div>
         </li>
       </ul>

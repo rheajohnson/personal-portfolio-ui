@@ -7,10 +7,6 @@ import MobileNavMenu from "components/mobile-nav-menu";
 export default function Header({ setActivePage, page }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const setMenuDelay = (state) => {
-    setTimeout(() => setMobileMenuOpen(state), 0);
-  };
-
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -24,10 +20,10 @@ export default function Header({ setActivePage, page }) {
       <header>
         <div
           role="button"
-          tabIndex={0}
           className="logo-container"
-          onKeyDown={() => setActivePage(0)}
+          onKeyDown={(e) => e.key === "Enter" && setActivePage(0)}
           onClick={() => setActivePage(0)}
+          tabIndex={0}
         >
           <img src={Logo} alt="Ryan Johnson - Developer" />
           <div className="logo-container-signature">
@@ -42,7 +38,6 @@ export default function Header({ setActivePage, page }) {
         />
         <MobileNavMenu
           setActivePage={setActivePage}
-          setMenuDelay={setMenuDelay}
           setMobileMenuOpen={setMobileMenuOpen}
           mobileMenuOpen={mobileMenuOpen}
         />

@@ -20,7 +20,9 @@ logo
 .logo-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-left: 5vw;
+  height: 100%;
 }
 
 .logo-container img {
@@ -58,7 +60,7 @@ nav
   list-style-type: none;
 }
 
-.nav li:not(:nth-of-type(2)) {
+.nav li:not(:last-of-type) {
   margin-right: 5rem;
 }
 
@@ -123,6 +125,10 @@ mobile nav
 
 .mobile-nav li {
   margin-bottom: 5rem;
+}
+
+.mobile-nav li:hover {
+  cursor: pointer;
 }
 
 .mobile-nav.open {
