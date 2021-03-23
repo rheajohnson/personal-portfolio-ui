@@ -9,18 +9,27 @@ export default function WorkPost({
   image,
   buttonOneLink,
   buttonTwoLink,
+  reverse,
 }) {
   const openInNewTab = (url) => {
     const win = window.open(url, "_blank");
     win.focus();
   };
-  return (
-    <section className="work-post">
+  const renderImage = () => {
+    return (
       <div className="work-post-image">
         <img src={image} alt="app1 mock visual" />
       </div>
+    );
+  };
+  return (
+    <section
+      className={`work-post ${reverse ? "work-post-left" : "work-post-right"}`}
+    >
+      {reverse && renderImage()}
       <div className="work-post-content">
         <h2>{title}</h2>
+
         {copy}
         <div className="work-post-content-action">
           <Button
@@ -33,6 +42,7 @@ export default function WorkPost({
           />
         </div>
       </div>
+      {!reverse && renderImage()}
     </section>
   );
 }

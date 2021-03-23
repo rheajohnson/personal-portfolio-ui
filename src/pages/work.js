@@ -1,6 +1,7 @@
 import React from "react";
 import WorkPost from "components/work-post";
-import app1 from "assets/app1.png";
+import financeScraper from "assets/finance-scraper.png";
+import flashcardMaker from "assets/flashcard-maker.png";
 
 export default React.memo(function Work() {
   return (
@@ -34,9 +35,32 @@ export default React.memo(function Work() {
           }
           buttonOneLabel="Demo"
           buttonTwoLabel="GitHub"
-          image={app1}
+          image={financeScraper}
           buttonOneLink="https://www.financescraper.ryanjohnsondev.com"
           buttonTwoLink="https://github.com/rjohnson91/reddit-finance-analysis-ui"
+        />
+        <WorkPost
+          title="Flashcard Maker"
+          copy={
+            <>
+              <p>
+                This serverless app lets users create flashcard sets for study.
+                Explore public flashcard sets, or make an account to create your
+                own. User progress is saved during each session.
+              </p>
+              <p>
+                Built using React and various AWS services; including DynamoDB,
+                Cognito, API Gateway, Lambdas, and CDK. Visit the GitHub repo
+                for more details.
+              </p>
+            </>
+          }
+          buttonOneLabel="Demo"
+          buttonTwoLabel="GitHub"
+          image={flashcardMaker}
+          buttonOneLink="https://www.flashcardmaker.ryanjohnsondev.com"
+          buttonTwoLink="https://github.com/rjohnson91/flashcardmaker"
+          reverse
         />
       </section>
     </>

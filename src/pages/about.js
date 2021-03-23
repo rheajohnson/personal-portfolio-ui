@@ -1,9 +1,12 @@
 import React from "react";
+import profile from "../assets/profile.png";
 
 export default React.memo(function About() {
   return (
     <section className="about">
-      <div className="about-content-image" />
+      <div className="about-content-image">
+        <img src={profile} alt="profile" />
+      </div>
       <div className="about-content-copy">
         <section className="sub-header">
           <h2>A little about me</h2>
