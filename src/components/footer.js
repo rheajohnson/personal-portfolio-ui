@@ -1,21 +1,23 @@
 import React from "react";
 import SocialNav from "components/social-nav";
 
-export default function Footer() {
+export default function Footer({ page, setActivePage }) {
   return (
-    <footer>
-      <span>
+    <footer className="page-footer">
+      {page !== 2 && (
         <h3>
           Have a project in mind?{" "}
-          <a
-            className="email-link"
-            href="mailto:rjohnsondev@protonmail.com"
-            alt="get-in-touch"
+          <span
+            role="button"
+            className="page-footer-contact"
+            onClick={() => setActivePage(2)}
+            onKeyDown={(e) => e.key === "Enter" && setActivePage(2)}
+            tabIndex={0}
           >
             Get in touch!
-          </a>
+          </span>
         </h3>
-      </span>
+      )}
       <SocialNav />
       <p className="copyright"> © 2020 Ryan Johnson</p>
     </footer>

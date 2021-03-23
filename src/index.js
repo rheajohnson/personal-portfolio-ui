@@ -9,5 +9,6 @@ import "styles/footer.css";
 import "styles/header.css";
 import "styles/page-transition.css";
 import "styles/work.css";
+import "styles/contact.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));

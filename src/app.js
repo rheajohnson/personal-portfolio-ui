@@ -5,7 +5,7 @@ import About from "pages/about";
 import Contact from "pages/contact";
 import Footer from "components/footer";
 import PageTransition from "components/page-transition";
-import OutlineAccessibilityWrapper from "components/outline-accessibility-wrapper";
+import AppWrapper from "components/app-wrapper";
 
 import scrollUp from "helper/scroll-up";
 
@@ -51,14 +51,12 @@ const App = () => {
   };
 
   return (
-    <OutlineAccessibilityWrapper>
-      <div className="app">
-        <Header setActivePage={setActivePage} page={page} />
-        <main>{renderPage()}</main>
-        <Footer />
-        <PageTransition loading={loading} />
-      </div>
-    </OutlineAccessibilityWrapper>
+    <AppWrapper>
+      <Header setActivePage={setActivePage} page={page} />
+      <main>{renderPage()}</main>
+      <Footer setActivePage={setActivePage} page={page} />
+      <PageTransition loading={loading} />
+    </AppWrapper>
   );
 };
 

@@ -44,9 +44,9 @@ export default React.memo(function Work() {
           copy={
             <>
               <p>
-                This serverless app lets users create flashcard sets for study.
-                Explore public flashcard sets, or make an account to create your
-                own. User progress is saved during each session.
+                This serverless CRUD app lets users create flashcard sets for
+                study. Explore public flashcard sets, or make an account to
+                create your own. User progress is saved during each session.
               </p>
               <p>
                 Built using React and various AWS services; including DynamoDB,

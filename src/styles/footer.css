@@ -20,15 +20,27 @@ social
   opacity: 0.8;
 }
 
-footer {
-  padding: 6.4rem 0;
+.page-footer {
+  padding: 6.4rem 2rem;
   border-top: 1px solid #34373c;
-  background-color: #272a2f;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   position: relative;
+}
+
+.page-footer-contact {
+  color: #65d9f6;
+  text-decoration: none;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+.page-footer-contact:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 footer h3 {
@@ -42,7 +54,7 @@ footer a {
 
 .copyright {
   font-size: 1.3rem;
-  color: #747474;
+  color: #acacac;
   font-weight: 500;
   display: flex;
   align-items: center;

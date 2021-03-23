@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function OutlineAccessibilityWrapper({ children }) {
+export default function AppWrapper({ children }) {
   const [mouseDown, setMouseDown] = useState(false);
 
   useEffect(() => {
@@ -9,5 +9,7 @@ export default function OutlineAccessibilityWrapper({ children }) {
     document.addEventListener("keydown", () => setMouseDown(false));
   }, []);
 
-  return <div className={mouseDown ? "mousedown" : ""}>{children}</div>;
+  return (
+    <div className={`app ${mouseDown ? "mousedown" : ""}`}>{children}</div>
+  );
 }
