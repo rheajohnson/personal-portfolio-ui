@@ -11,8 +11,8 @@ export default function MobileNavMenu({
       <ul>
         <div
           role="button"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          onKeyDown={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={() => setMobileMenuOpen(false)}
+          onKeyDown={() => setMobileMenuOpen(false)}
           tabIndex={-1}
           className="mobile-nav-icon-close"
         >
@@ -24,7 +24,10 @@ export default function MobileNavMenu({
               setActivePage(0);
               setMobileMenuOpen(false);
             }}
-            onKeyDown={() => setActivePage(0)}
+            onKeyDown={() => {
+              setActivePage(0);
+              setMobileMenuOpen(false);
+            }}
             role="button"
             tabIndex={-1}
           >
@@ -37,7 +40,10 @@ export default function MobileNavMenu({
               setActivePage(1);
               setMobileMenuOpen(false);
             }}
-            onKeyDown={() => setActivePage(1)}
+            onKeyDown={() => {
+              setActivePage(1);
+              setMobileMenuOpen(false);
+            }}
             role="button"
             tabIndex={-1}
           >
@@ -50,7 +56,10 @@ export default function MobileNavMenu({
               setActivePage(2);
               setMobileMenuOpen(false);
             }}
-            onKeyDown={() => setActivePage(2)}
+            onKeyDown={() => {
+              setActivePage(2);
+              setMobileMenuOpen(false);
+            }}
             role="button"
             tabIndex={-1}
           >

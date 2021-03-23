@@ -32,10 +32,7 @@ export default function Header({ setActivePage, page }) {
           </div>
         </div>
         <MainNav setActivePage={setActivePage} page={page} />
-        <MobileNavButton
-          setMobileMenuOpen={setMobileMenuOpen}
-          mobileMenuOpen={mobileMenuOpen}
-        />
+        <MobileNavButton setMobileMenuOpen={setMobileMenuOpen} />
         <MobileNavMenu
           setActivePage={setActivePage}
           setMobileMenuOpen={setMobileMenuOpen}
