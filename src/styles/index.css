@@ -29,9 +29,6 @@ html {
 /*
 layout
 */
-.app {
-  position: relative;
-}
 
 main {
   padding: 0 5vw;
@@ -166,7 +163,7 @@ subheader
   letter-spacing: 0.8px;
   left: 1.5rem;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 
 .sub-header h3::before,

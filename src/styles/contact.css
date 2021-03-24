@@ -66,11 +66,50 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+.contact-form-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  border-radius: 4px;
+  z-index: 0;
+  padding: 1.2rem 2rem;
+  background-color: white;
+  bottom: -6rem;
+  left: 2rem;
+  transition: 0.2s ease-in-out;
+}
+
+.contact-form-message.active {
+  bottom: 2rem;
+}
+
+.contact-form-message.success {
+  background-color: rgb(105, 172, 144);
+}
+
+.contact-form-message.failure {
+  background-color: rgb(211, 128, 128);
+}
+
+.contact-form-message p {
+  margin: 0 0 0 2rem;
+  font-size: 1.6rem;
+}
+
+.contact-form-message .anticon svg {
+  font-size: 2.4rem;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 876px) {
   .contact {
     width: 100%;
   }
   .contact-name {
     display: block;
+  }
+  .contact-form-message {
+    right: 2rem;
   }
 }

@@ -10,6 +10,7 @@
   width: 100%;
   top: 0;
   left: 100%;
+  z-index: 1;
 }
 
 .page-transition.loading div {
