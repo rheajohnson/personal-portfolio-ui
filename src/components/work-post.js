@@ -36,10 +36,12 @@ export default function WorkPost({
             label={buttonOneLabel}
             callback={() => openInNewTab(buttonOneLink)}
           />
-          <Button
-            label={buttonTwoLabel}
-            callback={() => openInNewTab(buttonTwoLink)}
-          />
+          {buttonTwoLink && (
+            <Button
+              label={buttonTwoLabel}
+              callback={() => openInNewTab(buttonTwoLink)}
+            />
+          )}
         </div>
       </div>
       {!reverse && renderImage()}

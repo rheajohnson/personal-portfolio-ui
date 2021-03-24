@@ -6,11 +6,12 @@ import Contact from "pages/contact";
 import Footer from "components/footer";
 import PageTransition from "components/page-transition";
 import AppWrapper from "components/app-wrapper";
-
 import scrollUp from "helper/scroll-up";
 
 const App = () => {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(
+    JSON.parse(sessionStorage.getItem("rj_page")) || 0
+  );
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,6 +30,7 @@ const App = () => {
   }, [loading]);
 
   const setActivePage = (page) => {
+    sessionStorage.setItem("rj_page", page);
     setLoading(true);
     setTimeout(() => {
       setPage(page);

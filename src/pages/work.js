@@ -1,7 +1,7 @@
 import React from "react";
 import WorkPost from "components/work-post";
 import financeScraper from "assets/finance-scraper.png";
-import flashcardMaker from "assets/flashcard-maker.png";
+// import flashcardMaker from "assets/flashcard-maker.png";
 
 export default React.memo(function Work() {
   return (
@@ -27,9 +27,9 @@ export default React.memo(function Work() {
                 Updates are made in real-time (no need to refresh).
               </p>
               <p>
-                Built using AWS Lambdas, AppSync, a GraphQL API, and React. The
-                infrastructure is managed with AWS CDK. Visit the GitHub repo
-                for more details.
+                Built using React, GraphQL, and various AWS services; including
+                Lambda, AppSync, and CDK. Visit the GitHub repo for more
+                details.
               </p>
             </>
           }
@@ -38,8 +38,9 @@ export default React.memo(function Work() {
           image={financeScraper}
           buttonOneLink="https://www.financescraper.ryanjohnsondev.com"
           buttonTwoLink="https://github.com/rjohnson91/reddit-finance-analysis-ui"
+          reverse
         />
-        <WorkPost
+        {/* <WorkPost
           title="Flashcard Maker"
           copy={
             <>
@@ -61,7 +62,7 @@ export default React.memo(function Work() {
           buttonOneLink="https://www.flashcardmaker.ryanjohnsondev.com"
           buttonTwoLink="https://github.com/rjohnson91/flashcardmaker"
           reverse
-        />
+        /> */}
       </section>
     </>
   );
