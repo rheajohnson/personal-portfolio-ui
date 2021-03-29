@@ -1,11 +1,15 @@
 import React from "react";
 import { CloseOutlined } from "@ant-design/icons";
+import Pdf from "assets/resume.pdf";
 
 export default function MobileNavMenu({
   setActivePage,
   setMobileMenuOpen,
   mobileMenuOpen,
 }) {
+  const onResumeClick = () => {
+    window.open(Pdf);
+  };
   return (
     <nav className={`mobile-nav ${mobileMenuOpen ? "open" : ""}`}>
       <ul>
@@ -64,6 +68,17 @@ export default function MobileNavMenu({
             tabIndex={-1}
           >
             Contact
+          </div>
+        </li>
+        <li>
+          <div
+            className={`nav-item-link`}
+            onClick={onResumeClick}
+            onKeyDown={(e) => e.key === "Enter" && onResumeClick()}
+            tabIndex={0}
+            role="button"
+          >
+            Resume
           </div>
         </li>
       </ul>

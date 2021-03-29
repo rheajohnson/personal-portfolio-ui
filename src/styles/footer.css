@@ -45,7 +45,6 @@ social
 }
 
 footer h3 {
-  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -55,6 +54,7 @@ footer a {
 
 .copyright {
   font-size: 1.3rem;
+  letter-spacing: 0.01rem;
   color: #acacac;
   font-weight: 500;
   display: flex;

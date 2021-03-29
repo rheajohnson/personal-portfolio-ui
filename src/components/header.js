@@ -27,8 +27,8 @@ export default function Header({ setActivePage, page }) {
         >
           <img src={Logo} alt="Ryan Johnson - Developer" />
           <div className="logo-container-signature">
-            <h3>Ryan Johnson</h3>
-            <h4>Developer</h4>
+            <h4>Ryan Johnson</h4>
+            <p>Developer</p>
           </div>
         </div>
         <MainNav setActivePage={setActivePage} page={page} />

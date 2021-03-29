@@ -65,7 +65,7 @@ jobs:
           name: Get secret value from AWS Secrets Manager
           command: |
             echo 'export SECRETS=$(aws secretsmanager get-secret-value \
-            --secret-id="arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:${AWS_ACCOUNT_ID}:secret:${CIRCLE_PROJECT_REPONAME}-env-vars-<< parameters.environment-name >>" \
+            --secret-id="arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:${AWS_ACCOUNT_ID}:secret:${CIRCLE_PROJECT_REPONAME}-env-vars" \
             --query="SecretString" \
             --output="text")' >> $BASH_ENV
       - run:

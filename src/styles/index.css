@@ -40,29 +40,38 @@ main {
 /*
 fonts
 */
-main h1 {
-  font-size: 4.5rem;
-  line-height: 1.5;
+h1,
+h2,
+h3 {
   margin-bottom: 2rem;
 }
 
-main h2 {
-  font-size: 3.2rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+h1 {
+  font-size: 4rem;
+  line-height: 6rem;
+  letter-spacing: 0.02rem;
 }
 
-main h3,
-footer h3 {
-  font-size: 2rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+h2 {
+  font-size: 2.8rem;
+  line-height: 4.2rem;
+  letter-spacing: 0.03rem;
 }
 
-main p {
+h3 {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.02rem;
+}
+
+p {
   font-size: 1.6rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.02rem;
+}
+
+p + p {
+  margin-top: 1.6rem;
 }
 
 a {
@@ -134,6 +143,7 @@ button {
     #65d9f6 51%,
     #4192b8 100%
   );
+  letter-spacing: 0.05rem;
 }
 
 button:hover {
@@ -157,17 +167,15 @@ subheader
   height: 6.4rem;
 }
 
-.sub-header h3,
-.sub-header h2 {
-  text-transform: capitalize;
-  letter-spacing: 0.8px;
+.sub-header h2,
+.sub-header h3 {
   left: 1.5rem;
   position: absolute;
   z-index: 0;
 }
 
-.sub-header h3::before,
-.sub-header h2::before {
+.sub-header h2::before,
+.sub-header h3::before {
   content: "";
   width: 100%;
   height: 70%;
@@ -176,20 +184,14 @@ subheader
   left: -1.5rem;
   top: -0.3rem;
   border-radius: 4px;
-  z-index: -1;
+  z-index: -4;
 }
 
-@media only screen and (max-width: 876px) {
+@media only screen and (max-width: 960px) {
   html {
     font-size: 9px;
   }
-  main h1 {
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  html {
-    font-size: 8px;
+  .fold h1 {
+    font-size: 3.2rem;
   }
 }

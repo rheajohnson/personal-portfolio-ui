@@ -23,6 +23,7 @@ logo
   align-items: center;
   margin-left: 5vw;
   height: 100%;
+  letter-spacing: 0.02rem;
 }
 
 .logo-container img {
@@ -41,14 +42,14 @@ logo
   margin-left: 1.5rem;
 }
 
-.logo-container-signature h3 {
+.logo-container-signature h4 {
   font-size: 1.8rem;
   margin-bottom: 0.2rem;
 }
 
-.logo-container-signature h4 {
-  font-size: 1.5rem;
-  font-weight: 400;
+.logo-container-signature p {
+  font-size: 1.6rem;
+  line-height: unset;
 }
 
 /*
@@ -59,10 +60,11 @@ nav
   margin-right: 5vw;
   align-items: center;
   list-style-type: none;
+  letter-spacing: 0.01rem;
 }
 
 .nav li:not(:last-of-type) {
-  margin-right: 5rem;
+  margin-right: 4rem;
 }
 
 .nav-item-link {
@@ -122,6 +124,7 @@ mobile nav
   height: 100%;
   background-color: #212429;
   list-style: none;
+  letter-spacing: 0.01rem;
 }
 
 .mobile-nav li:not(:last-of-type) {
@@ -136,11 +139,16 @@ mobile nav
   left: 0;
 }
 
-.mobile-nav-icon,
+.mobile-nav-icon {
+  margin-right: 5vw;
+  font-size: 24px;
+  color: white;
+}
+
 .mobile-nav-icon-close {
   position: absolute;
   right: 5vw;
-  top: 1.6rem;
+  top: 2rem;
   font-size: 24px;
   color: white;
 }

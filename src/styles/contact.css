@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   width: 70vw;
-  max-width: 760px;
+  max-width: 680px;
   margin: auto;
 }
 
@@ -29,9 +29,8 @@
 }
 
 .contact label {
-  text-transform: capitalize;
-  font-size: 13px;
-  margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 4px;
   color: #acacac;
 }
 
@@ -72,11 +71,10 @@
   align-items: center;
   position: fixed;
   border-radius: 4px;
-  z-index: 0;
+  z-index: 1;
   padding: 1.2rem 2rem;
   background-color: white;
   bottom: -6rem;
-  left: 2rem;
   transition: 0.2s ease-in-out;
 }
 

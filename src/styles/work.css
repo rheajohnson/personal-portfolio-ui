@@ -1,13 +1,24 @@
+.work-post button {
+  margin-top: 3.2rem;
+}
+
+.work-post button:not(:last-of-type) {
+  margin-right: 1.6rem;
+}
+
 .work-post-left,
 .work-post-right {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 4rem;
-  padding: 6.4rem 0;
+  padding: 12rem 0;
 }
 
-.work-post-image,
 .work-post-content {
+  width: 50%;
+}
+
+.work-post-image {
+  max-width: 52rem;
   width: 50%;
 }
 
@@ -20,7 +31,6 @@
 }
 
 .work-post-image img {
-  max-width: 60rem;
   width: 100%;
   height: auto;
   border-radius: 8px 8px 12px 12px;
@@ -37,11 +47,12 @@
   border-bottom: 1px solid #34373c;
 }
 
-.work-post button:not(:last-of-type) {
-  margin-right: 1.5rem;
+.disclaimer {
+  padding-bottom: 6.4rem;
+  border-bottom: 1px solid #34373c;
 }
 
-@media only screen and (max-width: 876px) {
+@media only screen and (max-width: 960px) {
   .work-post {
     flex-direction: column;
   }
