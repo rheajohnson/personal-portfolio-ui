@@ -83,11 +83,11 @@
 }
 
 .contact-form-message.success {
-  background-color: rgb(105, 172, 144);
+  background-color: #19b391;
 }
 
 .contact-form-message.failure {
-  background-color: rgb(211, 128, 128);
+  background-color: #f45b69;
 }
 
 .contact-form-message p {

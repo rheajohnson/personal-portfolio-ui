@@ -12,7 +12,6 @@ const sendEmail = async (data) => {
       data,
       { headers }
     );
-    console.log("response: ", response);
     return {
       status: "success",
       message: response.data,

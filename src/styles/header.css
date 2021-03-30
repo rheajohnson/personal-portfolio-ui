@@ -68,7 +68,7 @@ nav
 }
 
 .nav-item-link {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -82,7 +82,7 @@ nav
 .nav-item-link:after {
   position: absolute;
   height: 0.4rem;
-  background-color: #65d9f6;
+  background-color: #78bae3;
   border-radius: 20px;
   content: "";
   opacity: 0;
