@@ -17,11 +17,6 @@
   width: 50%;
 }
 
-.work-post-image {
-  max-width: 52rem;
-  width: 50%;
-}
-
 .work-post-left .work-post-image {
   margin-right: 8rem;
 }
@@ -30,17 +25,16 @@
   margin-left: 8rem;
 }
 
-.work-post-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px 8px 12px 12px;
+.work-post-image {
+  max-width: 52rem;
+  width: 50%;
+  border-radius: 4px;
 }
 
 .work-post-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 4rem;
 }
 
 .work-post:not(:last-of-type) {

@@ -17,9 +17,7 @@ export default function WorkPost({
   };
   const renderImage = () => {
     return (
-      <div className="work-post-image">
-        <img src={image} alt="app1 mock visual" />
-      </div>
+      <img className="work-post-image" src={image} alt="app1 mock visual" />
     );
   };
   return (
