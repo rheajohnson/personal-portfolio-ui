@@ -17,8 +17,8 @@ export default React.memo(function Work() {
           <h2>Personal work</h2>
         </div>
         <p>
-          Below you will find some work I&apos;ve done in my free-time. Check
-          out my resume to learn about my professional work!
+          Below you will find some projects I&apos;ve done in my free-time.
+          Check out my resume to learn about my professional work!
         </p>
       </section>
       <section className="work">
@@ -52,7 +52,7 @@ export default React.memo(function Work() {
             <>
               <p>
                 This serverless CRUD app lets users create flashcard sets for
-                study. Explore public flashcard sets, or make an account to
+                study. Explore public flashcard sets or make an account to
                 create your own. User progress is saved during each session.
               </p>
               <p>
