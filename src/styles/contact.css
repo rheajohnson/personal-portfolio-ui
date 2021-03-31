@@ -1,13 +1,13 @@
 .contact {
-  display: flex;
   height: calc(100vh - 12rem);
-  min-height: 680px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  min-height: 640px;
   width: 70vw;
   max-width: 680px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-form {
@@ -103,6 +103,8 @@
 @media only screen and (max-width: 876px) {
   .contact {
     width: 100%;
+    height: unset;
+    padding: 6.4rem 0;
   }
   .contact-name {
     display: block;
