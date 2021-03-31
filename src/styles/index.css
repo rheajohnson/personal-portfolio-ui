@@ -75,7 +75,7 @@ p + p {
 }
 
 a {
-  color: #78bae3;
+  color: #04befe;
   text-decoration: none;
   transition: 0.2s;
 }
@@ -139,9 +139,9 @@ button {
   border-radius: 4px;
   background-image: linear-gradient(
     to right,
-    #3e92cc 0%,
-    #78bae3 51%,
-    #3e92cc 100%
+    #3f86ed 0%,
+    #04befe 51%,
+    #3f86ed 100%
   );
   letter-spacing: 0.05rem;
 }

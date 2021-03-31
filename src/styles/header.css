@@ -82,7 +82,7 @@ nav
 .nav-item-link:after {
   position: absolute;
   height: 0.4rem;
-  background-color: #78bae3;
+  background-color: #04befe;
   border-radius: 20px;
   content: "";
   opacity: 0;
