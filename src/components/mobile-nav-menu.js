@@ -72,7 +72,6 @@ export default function MobileNavMenu({
         </li>
         <li>
           <div
-            className={`nav-item-link`}
             onClick={onResumeClick}
             onKeyDown={(e) => e.key === "Enter" && onResumeClick()}
             tabIndex={0}
