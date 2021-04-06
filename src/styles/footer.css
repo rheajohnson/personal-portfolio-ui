@@ -9,6 +9,8 @@ social
   cursor: pointer;
   color: white;
   font-size: 3rem;
+  transition: 0.3s;
+  opacity: 1;
 }
 
 .social-nav a:not(:last-of-type) {
@@ -17,7 +19,7 @@ social
 
 .social-nav svg:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.4;
 }
 
 .page-footer {

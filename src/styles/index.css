@@ -134,21 +134,15 @@ button {
   color: #fff;
   text-align: center;
   border: none;
-  background-size: 200% auto;
-  transition: 0.5s;
+  transition: 0.3s;
   border-radius: 4px;
-  background-image: linear-gradient(
-    to right,
-    #3f86ed 0%,
-    #04befe 51%,
-    #3f86ed 100%
-  );
+  background-color: #7289da;
   letter-spacing: 0.05rem;
 }
 
 button:hover {
   cursor: pointer;
-  background-position: right center;
+  background-color: #6579be;
 }
 
 button:active {
