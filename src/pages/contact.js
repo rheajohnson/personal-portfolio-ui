@@ -42,8 +42,9 @@ export default React.memo(function Contact() {
   const renderMessage = () => {
     return (
       <div
-        className={`contact-form-message ${message.status} ${message && message.active && "active"
-          }`}
+        className={`contact-form-message ${message.status} ${
+          message && message.active && "active"
+        }`}
       >
         {message.status === "success" ? (
           <CheckCircleOutlined />
