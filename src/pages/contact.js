@@ -42,9 +42,8 @@ export default React.memo(function Contact() {
   const renderMessage = () => {
     return (
       <div
-        className={`contact-form-message ${message.status} ${
-          message && message.active && "active"
-        }`}
+        className={`contact-form-message ${message.status} ${message && message.active && "active"
+          }`}
       >
         {message.status === "success" ? (
           <CheckCircleOutlined />
@@ -86,7 +85,7 @@ export default React.memo(function Contact() {
             />
           </div>
         </div>
-        <label htmlFor="email">Your email</label>
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"
